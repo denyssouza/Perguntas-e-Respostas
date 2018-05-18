@@ -9,6 +9,6 @@ public class AppPerguntasERespostasClient {
         // Realizando Conexão com Servidor.
 
         Socket OutServidor = new Socket("127.0.0.1", 4242); // Conectando ao IP localHost:4242
-        System.out.println("Conecxão Estabelecida.");
+        System.out.println("Conexão Estabelecida.");
     }
 }
