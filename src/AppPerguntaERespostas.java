@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -9,10 +10,10 @@ public class AppPerguntaERespostas {
 
         // Abrindo Socket
 
-        ServerSocket Servidor = new ServerSocket(4242); // Definido a porta 4242 TCP.
+        ServerSocket InputServidor = new ServerSocket(4242); // Definido a porta 4242 TCP.
         System.out.println("Servidor Iniciado...");
-        Socket Inputclient = Servidor.accept();
-        System.out.println("Conexão Estabelecida. " + Inputclient.getInetAddress().getHostAddress()); // Apresenta IP e Host.
+        Socket InputClient = InputServidor.accept();
+        System.out.println("Conexão Estabelecida. " + InputClient.getInetAddress().getHostAddress()); // Apresenta IP e Host.
 
 
         // Recebendo Nome dos Jogadores
