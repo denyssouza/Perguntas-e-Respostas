@@ -1,11 +1,10 @@
 import java.io.*;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class AppPerguntasERespostasClient {
+public class Cliente {
 
-    public static void main(String[] args) throws UnknownHostException, IOException{
+    public static void main(String[] args) throws IOException{
 
         // Realizando Conexão com Servidor.
 
@@ -21,7 +20,6 @@ public class AppPerguntasERespostasClient {
         Output.println(teclado.nextLine());
 
         // Comentário
-
 
         //BufferedReader reader = new BufferedReader(streamReader);
         //String advice = reader.readLine();
