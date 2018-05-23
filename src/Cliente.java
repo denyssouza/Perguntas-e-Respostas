@@ -10,8 +10,9 @@ public class Cliente {
 
         Socket Servidor = new Socket("127.0.0.1", 4242); // Conectando ao IP 127.0.0.1:4242
         System.out.println("Conexão Estabelecida.");
+
         PrintStream Output = new PrintStream(Servidor.getOutputStream()); // Enviando dados para maquina 1 via Socket.
-        InputStreamReader streamReader = new InputStreamReader(Servidor.getInputStream()); // Recebendo dados da maquina 1 via Socket.
+        BufferedReader Input = new BufferedReader(new InputStreamReader(Servidor.getInputStream())); // Recebendo dados da maquina 1 via Socket.
 
         // Recebendo nome do Player 2.
 
@@ -19,13 +20,10 @@ public class Cliente {
         Scanner teclado = new Scanner(System.in);
         Output.println(teclado.nextLine());
 
-        // Comentário
+        // Imprimindo Nome dos Competidores
 
-        //BufferedReader reader = new BufferedReader(streamReader);
-        //String advice = reader.readLine();
-
-
-
+        String linha = Input.readLine();
+        System.out.println(linha);
 
     }
 }

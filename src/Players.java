@@ -18,8 +18,9 @@ public class Players {
         Player2 = player2;
     }
 
-    void NamePlayers(){
+    public String NamePlayers(){
 
-        System.out.println("Competidores: " + getPlayer1() +" X "+ getPlayer2());
+       // System.out.println("Competidores: " + getPlayer1() +" X "+ getPlayer2());
+        return "Competidores: " + getPlayer1() +" X "+ getPlayer2();
     }
 }
