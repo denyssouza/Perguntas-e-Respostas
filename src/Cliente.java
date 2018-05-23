@@ -16,14 +16,15 @@ public class Cliente {
 
         // Recebendo nome do Player 2.
 
-        System.out.println("Informe o nome do Player 2: ");
+        System.out.println("Informe seu nome: ");
         Scanner teclado = new Scanner(System.in);
         Output.println(teclado.nextLine());
 
         // Imprimindo Nome dos Competidores
 
         String linha = Input.readLine();
-        System.out.println(linha);
+        System.out.println(linha); // Recebe o Nome dos Competidores.
+        System.out.println("Aguarde as dicas do seu adversário.");
 
     }
 }
