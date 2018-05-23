@@ -24,14 +24,18 @@ public class Servidor {
         Scanner entrada = new Scanner(System.in); // Inicializa a entrada de dados via Teclado.
         Players player = new Players();
 
-        System.out.println("Informe o nome do Player 1: ");
+        System.out.println("Informe seu nome: ");
         player.setPlayer1(entrada.next()); // Armazenando nome de Player 1.
         player.setPlayer2(Input.readLine());   // Armazenando nome de Player 2.
 
-        // Comentário
-
         Output.println(player.NamePlayers()); // Imprime para Cliente.
         System.out.println(player.NamePlayers()); // Imprime para Servidor.
+
+        // Sorteio da Palavra para Player 1.
+        Words palavra = new Words();
+        System.out.println("Competidor, sua palavra é: " + palavra.sorteio); //Sorteio da palavra para Player 1.
+        System.out.println("Informe a primeira dica para " + player.getPlayer2());
+
 
 
     }
