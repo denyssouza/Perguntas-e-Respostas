@@ -1,20 +1,21 @@
 @startuml
-:Main Admin: as Admin
-(Use the application) as (Use)
 
-User -> (Start)
-User --> (Use)
+	(Inserir Competidor 1) as (Use1)
+	(Inserir Competidor 2) as (Use2)
+	(Informar Palavra aos Competidores) as (Use3)
+	(Informar ao Competidor as Dicas) as (User4)
+	(Computar Pontuação) as (Use5)
+	(Informar Vencedor) as (Use6)
 
-Admin ---> (Use)
+	left to right direction
 
-note right of Admin : This is an example.
+	Competidor_1 --> (Use1)
+	Competidor_2 --> (Use2)
+	Competidor_1 --> (User4)
+	Competidor_2 --> (User4)
+	Sistema --> (Use3)
+	Sistema --> (Use5)
+	Sistema --> (Use6)
 
-note right of (Use)
-A note can also
-be on several lines
-end note
 
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
-@enduml
+	@enduml
