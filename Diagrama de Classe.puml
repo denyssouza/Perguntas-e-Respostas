@@ -1,26 +1,36 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+Servidor <|--|> Cliente
+Servidor <|--|> Words
+Servidor <|--|> Players
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Servidor{
+Socket
+Nome
+Retornar Nome do Competidor 1()
+Encaminhar Nome do Competidor 2()
+Buscar Palavra()
+Encaminha Nome dos Competidores()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Cliente{
+Nome
+Retornar Nome do Competidor 2()
 }
 
+class Words{
+Palavra
+Sortear Palavra()
+Retornar Palavra()
+}
+
+class Players {
+Competidor 1
+Competidor 2
+Nome dos Competidores
+Armazenar Competidor 1()
+Armazenar Competidor 2()
+Retornar Nome dos Players()
+
+}
 @enduml
