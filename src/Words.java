@@ -2,7 +2,15 @@ import java.util.Random;
 
 public class Words {
 
-    private String[] palavras = {"Gato", "Cachorro", "Papagaio", "Tartaruga", "Peixe"};
+    private String[] palavras = { "Gato", "Cachorro", "Papagaio", "Tartaruga", "Peixe" };
+    private Random random; // Incializa a função Random.
+    private String sorteio;
+
+    public Words() {
+        super();
+        random = new Random();
+        sorteio = palavras[random.nextInt(palavras.length)]; // Faz um Random da String palavras.
+    }
 
     public String[] getPalavras() {
         return palavras;
@@ -12,11 +20,12 @@ public class Words {
         this.palavras = palavras;
     }
 
-    Random random = new Random(); // Incializa a função Random.
-    String sorteio = palavras[random.nextInt(palavras.length)]; // Faz um Random da String palavras.
-
-    void Saida(){
-
-        System.out.println(sorteio);
+    public String getSorteio() {
+        return sorteio;
     }
+
+    public void setSorteio(String sorteio) {
+        this.sorteio = sorteio;
+    }
+
 }

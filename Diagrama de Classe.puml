@@ -1,7 +1,7 @@
 @startuml
 
 Servidor <|--|> Cliente
-Servidor <|--|> Words
+Servidor <|--|> BancoDePalavras
 Servidor <|--|> Players
 
 class Servidor{
@@ -18,7 +18,7 @@ Nome
 Retornar Nome do Competidor 2()
 }
 
-class Words{
+class BancoDePalavras{
 Palavra
 Sortear Palavra()
 Retornar Palavra()

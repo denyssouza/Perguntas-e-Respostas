@@ -1,26 +1,32 @@
 public class Players {
 
-    private String Player1, Player2;
+    private Player player1, player2;
 
-    public String getPlayer1() {
-        return Player1;
+    public Players() {
+        super();
+        player1 = new Player();
+        player2 = new Player();
     }
 
-    public void setPlayer1(String player1) {
-        Player1 = player1;
+    public Player getPlayer1() {
+        return player1;
     }
 
-    public String getPlayer2() {
-        return Player2;
+    public void setPlayer1(Player player1) {
+        this.player1 = player1;
     }
 
-    public void setPlayer2(String player2) {
-        Player2 = player2;
+    public Player getPlayer2() {
+        return player2;
     }
 
-    public String NamePlayers(){
+    public void setPlayer2(Player player2) {
+        this.player2 = player2;
+    }
 
-       // System.out.println("Competidores: " + getPlayer1() +" X "+ getPlayer2());
-        return "Competidores: " + getPlayer1() +" X "+ getPlayer2();
+    public String NamePlayers() {
+
+        // System.out.println("Competidores: " + getPlayer1() +" X "+ getPlayer2());
+        return "Competidores: " + getPlayer1().getNome() + " X " + getPlayer2().getNome();
     }
 }
